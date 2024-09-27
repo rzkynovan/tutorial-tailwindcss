@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import Tailwind Css CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- https://uicolors.app/create -->
+    <!-- GSM menggunakan color primary #6374ae -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "gray-blue": {
+                50: "#f2f7fb",
+                100: "#e7f0f8",
+                200: "#d3e2f2",
+                300: "#b9cfe8",
+                400: "#9cb6dd",
+                500: "#839dd1",
+                600: "#6a7fc1",
+                700: "#6374ae",
+                800: "#4a5989",
+                900: "#414e6e",
+                950: "#262c40",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>TailwindCSS</title>
+  </head>
+  <body>
+    <!-- Secara default tailwind akan dieksekusi di mobile terlebih dahulu -->
+    <div class="container px-6 mt-12 lg:px-20 lg:mt-20">
+      <!-- max-md dapat digunakan jika kalian ngoding dari desktop layout -->
+      <div class="wrapper flex flex-row max-lg:flex-col items-center gap-6">
+        <!-- Logika : default value adalah flex-row, dibawah layar lg maka dia akan memakai flex-col -->
+        <img
+          class="hero w-full lg:w-1/2"
+          src="https://images.unsplash.com/photo-1727294810277-5da030783146?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+        <div class="content flex flex-col gap-3">
+          <h1 class="text-4xl lg:text-5xl font-bold">Mountain</h1>
+          <!-- Arbitrary values gunakan "[]" sesuai kebutuhan kalian -->
+          <p class="text-xl font-[500] max-md:text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quisquam
+            voluptate reiciendis laborum perferendis aliquid consequuntur cumque
+            voluptatibus.
+          </p>
+          <div>
+            <!-- Gunakan "hover:" untuk state ketika di hover -->
+            <!-- Panggil color yang telah di custom -->
+            <a
+              href=""
+              class="bg-gray-blue-800 text-white px-3 py-2 rounded-md hover:opacity-80 lg:bg-gray-blue-400 lg:text-black"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
